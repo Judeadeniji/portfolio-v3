@@ -28,6 +28,9 @@ const MyProjectsSection: Component = function () {
         <Suspense
           fallback={
             <div class="flex flex-col gap-y-[16pt]">
+              <h2 class="text-[16pt] font-medium mt-4 mb-1 text-gray-700 dark:text-zinc-300">
+                My Projects
+              </h2>
               <SingleProjectCardSkeleton />
               <SingleProjectCardSkeleton />
               <SingleProjectCardSkeleton />
@@ -73,7 +76,11 @@ const SingleProjectCard: Component<{ project: Post }> = function (props) {
       </div>
 
       <div class="flex flex-col gap-y-1 p-1">
-        <a href={props.project.link} title={`link to ${props.project.title}`}  class="flex flex-row items-center gap-x-2 p-1">
+        <a
+          href={props.project.link}
+          title={`link to ${props.project.title}`}
+          class="flex flex-row items-center gap-x-2 p-1"
+        >
           {/* <img
             src="https://www.amcechealth.com/favicon.png"
             class="rounded aspect-square h-full w-[16pt]"

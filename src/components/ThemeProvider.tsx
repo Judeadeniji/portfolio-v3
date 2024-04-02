@@ -1,4 +1,5 @@
 import { JSXElement, createContext, createEffect, createSignal, useContext } from 'solid-js';
+import { isServer } from 'solid-js/web';
 
 type Theme = "dark" | "light" | "system";
 
@@ -24,26 +25,30 @@ export function ThemeProvider(props: ThemeProviderProps) {
   const [theme, setTheme] = createSignal<Theme>((localStorage.getItem(props.storageKey || "theme") as Theme) || props.defaultTheme || "system");
 
   createEffect(() => {
-    const root = window.document.documentElement;
+    if (!isServer) {
+      const root = window.document.documentElement;
 
-    root.classList.remove("light", "dark");
-
-    if (theme() === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
-        ? "dark"
-        : "light";
-
-      root.classList.add(systemTheme);
-      return;
+      root.classList.remove("light", "dark");
+  
+      if (theme() === "system") {
+        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+          .matches
+          ? "dark"
+          : "light";
+  
+        root.classList.add(systemTheme);
+        return;
+      }
+  
+      root.classList.add(theme() ?? "");
     }
 
-    root.classList.add(theme() ?? "");
   });
 
   const value: ThemeProviderState = {
     theme,
     setTheme: (theme: Theme) => {
+      if ((isServer)) return;
       localStorage.setItem(props.storageKey || "theme", theme);
       setTheme(theme);
     },
@@ -52,7 +57,7 @@ export function ThemeProvider(props: ThemeProviderProps) {
   return (
     <themeProviderContext.Provider value={value}>
       { props.children }
-      </themeProviderContext.Provider>
+    </themeProviderContext.Provider>
   )
 }
 

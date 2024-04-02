@@ -16,7 +16,7 @@ const App: Component<P> = (props) => {
       </section>
 
       <footer class="py-3">
-        <p class="text-center text-gray-400 dark:text-zinc-700 text-[10pt] font-medium font-sans">TheLazyDev - {new Date().getFullYear()}</p>
+        <p class="text-center text-gray-400 dark:text-zinc-700 text-[14pt] font-medium font-sans">TheLazyDev - {new Date().getFullYear()}</p>
       </footer>
     </main>
   );

@@ -3,6 +3,7 @@ import { CgMenuRightAlt } from "solid-icons/cg";
 import { FaSolidMoon, FaSolidSun } from "solid-icons/fa";
 import { VsChromeClose } from "solid-icons/vs";
 import { Accessor, For, Match, Setter, Show, Switch, createComputed, createEffect, createSignal } from "solid-js";
+import { isServer } from "solid-js/web";
 import { useTheme } from "./ThemeProvider";
 
 const navLinks = [
@@ -37,6 +38,7 @@ function Header() {
    }
 
   createEffect(() => {
+    if (isServer) return;
     if (mobileMenu()) {
       document.querySelector("main")!.style.overflow = "hidden";
     } else {
