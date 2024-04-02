@@ -39,8 +39,8 @@ const Herosection: Component = function () {
             <VsGlobe size={18} image-rendering="optimizeQuality" />
           </span>
 
-          <a href="/" class="text-gray-700 dark:text-white font-bold text-[11pt]">
-            SomeUrl.com
+          <a href="https://the-lazy-dev.vercel.app/" target="_blank"  class="text-gray-700 dark:text-white font-bold text-[11pt]">
+            Blog
           </a>
         </div>
         <p>-</p>
@@ -49,7 +49,7 @@ const Herosection: Component = function () {
             <BsCalendar4Event size={18} image-rendering="optimizeQuality" />
           </span>
 
-          <a href="" class="text-gray-700 dark:text-white font-bold text-[11pt]">
+          <a href="mailto:adeniiferanmi64@gmail.com" class="text-gray-700 dark:text-white font-bold text-[11pt]">
             Book a meeting
           </a>
         </div>
