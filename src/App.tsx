@@ -9,7 +9,7 @@ const App: Component<P> = (props) => {
 
   
   return (
-    <main class="h-screen w-screen font-sf relative dark:font-medium tracking-normal dark:bg-[#111] dark:text-[#ccc] text-gray-700 text-[11pt] margin-x-auto overflow-y-scroll no-scrollbar transition-colors duration-300">
+    <main class="h-screen w-screen font-sf relative dark:font-medium tracking-normal bg-gray-50 dark:bg-[#111] dark:text-[#ccc] text-gray-700 text-[11pt] margin-x-auto overflow-y-scroll no-scrollbar transition-colors duration-300">
       <Header />
       <section class="max-w-[32rem] mx-auto px-[8pt]">
         {props.children}

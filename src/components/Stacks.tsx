@@ -7,7 +7,7 @@ const MyTechStacks: Component = function () {
   const [dropdownOpened, setDropdownOpened] = createSignal(false);
 
   return (
-    <div class="dark:bg-[#222] bg-gray-50 rounded-[6pt] py-[6pt] px-[8pt]">
+    <div class="dark:bg-[#222] bg-gray-100 rounded-[6pt] py-[6pt] px-[8pt]">
       <div
         role="checkbox"
         aria-checked={dropdownOpened()}
@@ -27,8 +27,8 @@ const MyTechStacks: Component = function () {
 
       <div
         class={cn(
-          "rounded-[4pt] bg-gray-100 dark:bg-[#111111ec] p-4 mt-[8pt] flex flex-col gap-y-3",
-          dropdownOpened() ? "max-h-[400px] transition-all duration-300" : "max-h-0 overflow-hidden py-0 mt-0 duration-300"
+          "rounded-[4pt] bg-gray-50 dark:bg-[#111111ec] p-4 mt-[8pt] flex flex-col gap-y-3",
+          dropdownOpened() ? "max-h-[400px] transition-all duration-[400ms]" : "max-h-0 overflow-hidden py-0 mt-0 opacity-0 duration-300"
         )}
         style={{ "max-height": dropdownOpened() ? "400px" : "0" }}
         aria-hidden={!dropdownOpened()}

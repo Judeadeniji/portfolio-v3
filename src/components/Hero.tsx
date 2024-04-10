@@ -34,7 +34,7 @@ const Herosection: Component = function () {
       </p>
 
       <div class="flex flex-row items-center gap-x-3">
-        <div class="flex items-center gap-x-2 py-1 px-2 rounded hover:bg-gray-200 dark:hover:bg-zinc-700 hover:bg-opacity-40">
+        <div class="flex items-center gap-x-2 py-1 px-2 rounded hover:bg-gray-200 dark:hover:bg-zinc-800 border border-transparent hover:border-gray-300 dark:hover:border-zinc-700">
           <span>
             <VsGlobe size={18} image-rendering="optimizeQuality" />
           </span>
@@ -44,7 +44,7 @@ const Herosection: Component = function () {
           </a>
         </div>
         <p>-</p>
-        <div class="flex items-center gap-x-2 py-1 px-2 rounded hover:bg-gray-200 dark:hover:bg-zinc-700 hover:bg-opacity-40">
+        <div class="flex items-center gap-x-2 py-1 px-2 rounded hover:bg-gray-200 dark:hover:bg-zinc-800 border border-transparent hover:border-gray-300 dark:hover:border-zinc-700">
           <span>
             <BsCalendar4Event size={18} image-rendering="optimizeQuality" />
           </span>

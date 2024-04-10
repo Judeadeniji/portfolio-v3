@@ -70,7 +70,7 @@ const Projects: Component<{ name: string; projects: Post[] }> = function (
 
 const SingleProjectCard: Component<{ project: Post }> = function (props) {
   return (
-    <div class="relative dark:bg-[#22222261] bg-gray-100 p-[4pt] rounded-[6pt] overflow-hidden">
+    <div class="relative dark:bg-[#2222221c] bg-[#ffffff3c] border backdrop-blur-[3pt] dark:border-[#333] p-[4pt] rounded-[6pt] overflow-hidden">
       <div class="absolute text-[10pt] top-0 right-0 rounded-bl-[6pt] px-2 py-1 dark:bg-[#222] bg-[#22222223]">
         <span>FullStack</span>
       </div>
@@ -104,7 +104,7 @@ const SingleProjectCard: Component<{ project: Post }> = function (props) {
         <ul class="flex flex-wrap gap-2 my-3">
           <For each={[props.project.category]}>
             {(tech) => (
-              <li class="text-[11pt] capitalize bg-gray-200 dark:bg-[#242326] text-gray-600 dark:text-zinc-400 dark:hover:text-zinc-200 cursor-default py-1 px-2 rounded-md text-cener">
+              <li class="text-[11pt] capitalize bg-gray-200 dark:bg-[#2e2d2f] text-gray-600 dark:text-zinc-400 dark:hover:text-zinc-200 cursor-default py-1 px-2 rounded-md text-cener">
                 <a href="">{tech}</a>
               </li>
             )}
