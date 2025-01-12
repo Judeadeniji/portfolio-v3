@@ -1,0 +1,104 @@
+{
+    "name": "Oluwaferanmi Adeniji",
+    "contact": {
+      "email": "adenijiferanmi64@gmail.com",
+      "phone": "09048786857",
+      "location": "Ibadan, Oyo state"
+    },
+    "projects": [
+      {
+        "name": "RCCG Banner of Love Parish Website Project",
+        "description": "Led the development of the official website for RCCG Banner of Love Parish, a community church in Lagos. The project involved designing and implementing a user-friendly and visually appealing platform.",
+        "technologies": ["Next.js", "Tailwind", "Git"],
+        "features": [
+          "Responsive Design",
+          "Event Management",
+          "Sermon Archive",
+          "Online Giving",
+          "Content Management System",
+          "Member Registration Form"
+        ],
+        "live_url": "https://rccgbanneroflovelagos.org",
+        "img_url": "/images/rccg-banner-of-love.png"
+      },
+      {
+        "name": "Audrasia Retail",
+        "description": "A retail platform that allows users to purchase products online. The platform features a user-friendly interface, product catalog, and secure payment gateway.",
+        "technologies": ["Next.js", "Tailwind", "NestJS", "Vendure", "Flutterwave"],
+        "features": [
+          "Product Catalog",
+          "Shopping Cart",
+          "Order Management",
+          "Payment Gateway Integration",
+          "Admin Dashboard"
+        ],
+        "img_url": "/images/audrasia-retail.png",
+        "live_url": "https://audrasiaretail.com"
+      },
+      {
+        "name": "Paystack SDK (Edge)",
+        "description": "Paystack SDK written in Typescript for development on edge and serverless servers.",
+        "technologies": ["Typescript", "Better Fetch", "Node.js", "Paystack API"],
+        "repo": "https://github.com/Judeadeniji/paystack-edge",
+        "img_url": "/images/paystack-edge.png"
+      },
+      {
+        "name": "Servex",
+        "description": "A high-performance, extensible HTTP server framework inspired by Express, Hono, and Fastify. It aims to deliver blazing speed, rock-solid reliability, and effortless elegance for modern web applications.",
+        "technologies": ["Typescript", "Bun", "Servex", "Jest"],
+        "repo": "https://github.com/Judeadeniji/servex",
+        "img_url": "/images/servex.png"
+      },
+      {
+        "name": "My Portfolio",
+        "description": "A personal portfolio that houses some of the projects I have worked on, built with JavaScript and Tailwind CSS.",
+        "technologies": ["JavaScript", "Tailwind CSS"],
+        "live_url": "https://judeadeniji.github.io",
+        "img_url": "/images/my-portfolio.png"
+      },
+      {
+        "name": "Personal Blog (2023)",
+        "description": "A personal blogging website built with Sveltekit, JavaScript, and Tailwind CSS. The app fetches data from an external source and allows for tailored data presentation.",
+        "technologies": ["Sveltekit", "JavaScript", "Tailwind CSS"],
+        "live_url": "https://the-lazy-dev.netlify.app",
+        "img_url": "/images/personal-blog.png"
+      },
+      {
+        "name": "REST Country API (Frontend Mentor)",
+        "description": "A frontend project built with Tailwind, React, and RC Extended for working with React.",
+        "technologies": ["Tailwind", "React", "RC Extended"],
+        "live_url": "https://country-api-with-signals.netlify.app/",
+        "repo": "https://github.com/Judeadeniji/rest-countries-api-with-color-theme-switcher-master-v2-with-signals",
+        "img_url": "/images/rest-country-api.png"
+      },
+      {
+        "name": "Doodle Cam",
+        "description": "A JavaScript-based camera web application that allows users to take pictures, apply filters, and draw on their photos using a simple and intuitive interface.",
+        "live_url": "https://doodle-cam.netlify.app/",
+        "technologies": ["JavaScript", "BraceJS", "Tailwind CSS"],
+        "repo": "https://github.com/Judeadeniji/Doodle-Cam",
+        "img_url": "/images/doodle-cam.png"
+      },
+      {
+        "name": "Rick and Morty DB",
+        "live_url": "https://rick-mort-db.netlify.app",
+        "description": "A web application that fetches data from the Rick and Morty API and displays it in a user-friendly interface. The app allows users to search for characters, view character details, and filter characters by status, species, and gender.",
+        "technologies": ["React", "Tailwind CSS", "RC Extended"],
+        "img_url": "/images/rick-mort-db.png"
+      },
+      {
+        "name": "My Portfolio (current)",
+        "description": "An updated version of my portfolio built with SolidJs, Typescript, Tailwind CSS, and Vite.",
+        "technologies": ["SolidJs", "Typescript", "Tailwind CSS", "Vite"],
+        "live_url": "https://feranmi-v3.netlify.app",
+        "img_url": "/images/my-portfolio-v3.png"
+      },
+      {
+        "name": "The Ordinary (2023)",
+        "description": "An online E-commerce platform built with JavaScript and Tailwind CSS.",
+        "live_url": "https://the-ordinary.onrender.com",
+        "img_url": "/images/the-ordinary.png"
+      }
+    ]
+  }
+  

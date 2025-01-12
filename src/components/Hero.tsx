@@ -1,78 +1,155 @@
+import { createSignal, onMount, Component, For, JSXElement } from "solid-js";
 import { BsCalendar4Event } from "solid-icons/bs";
 import { FaBrandsTwitter } from "solid-icons/fa";
 import { VsGlobe } from "solid-icons/vs";
-import { Component, For, JSXElement } from "solid-js";
 import { socials } from "../shared";
+import { A } from "@solidjs/router";
+
+// Custom hook for typing animation
+const useTypewriter = (text: string, speed = 50) => {
+  const [displayText, setDisplayText] = createSignal("");
+
+  onMount(() => {
+    let index = 0;
+    let start: number | null = null;
+
+    const step = (timestamp: number) => {
+      if (!start) start = timestamp;
+      const progress = timestamp - start;
+
+      if (progress >= speed) {
+        if (index < text.length) {
+          setDisplayText((prev) => prev + text[index]);
+          index++;
+          start = timestamp;
+        }
+      }
+
+      if (index < text.length) {
+        requestAnimationFrame(step);
+      }
+    };
+
+    requestAnimationFrame(step);
+  });
+
+  return displayText;
+};
 
 const Herosection: Component = function () {
+  const [isHovered, setIsHovered] = createSignal(false);
+
+  const typedBio = useTypewriter(
+    "I'm a Fullstack Engineer — a builder focused on creating user-friendly products and experiences for the web."
+  );
+
   return (
-    <section class="flex flex-col gap-y-4 items-center justify-center w-full py-[16pt]">
-      <figure class="h-[50pt] w-auto aspect-square overflow-clip rounded-md">
-        <img src="https://s1.zerochan.net/Sung.Jin-woo.600.3537814.jpg" class="size-full object-cover object-center" alt="The Creator" />
+    <section class="relative min-h-[83vh] flex flex-col gap-y-3 items-center justify-center w-full py-8 px-4 overflow-hidden">
+      {/* Profile image with hover effect */}
+      <figure
+        class="relative w-32 h-32 rounded-full overflow-hidden transform transition-transform duration-500 hover:scale-110"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div
+          class={`absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 transition-opacity duration-300 ${
+            isHovered() ? "opacity-100" : "opacity-0"
+          }`}
+        />
+        <img
+          src="https://s1.zerochan.net/Sung.Jin-woo.600.3537814.jpg"
+          class="size-full object-cover object-center transform transition-transform duration-500 hover:scale-110"
+          alt="The Creator"
+        />
       </figure>
 
-      <div>
-        <h1 class="font-bold self-stretch text-xl text-center leading-loose dark:text-[#fefefe]">
+      {/* Name and role with animation */}
+      <div class="text-center space-y-2">
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-gray-500 dark:via-white dark:to-gray-400 transform transition-all duration-500 hover:scale-105 animate-fadeIn">
           Adeniji Oluwaferanmi
         </h1>
 
-        <div class="flex mx-auto min-w-0 max-w-[max-content] items-center text-[10pt] gap-x-2">
-          <p> Web Developer </p>
-          <p>-</p>
-          <p>
-            Nigeria{" "}
-            <span role="img" aria-label="Nigerian Flag">
-              🇳🇬
-            </span>
-          </p>
+        {/* <div class="h-6 overflow-hidden">
+          <div
+            class="flex flex-col transition-transform duration-500"
+            style={{ transform: `translateY(-${currentRole() * 28}px)` }}
+          >
+            {roles.map((role) => (
+              <p class="text-lg text-gray-600 dark:text-gray-300">{role}</p>
+            ))}
+          </div>
+        </div> */}
+
+        <div class="flex mx-auto min-w-0 max-w-[max-content] items-center text-sm gap-x-2 text-gray-600 dark:text-gray-300">
+          <p>Nigeria</p>
+          <span role="img" class="animate-wave inline-block">🇳🇬</span>
         </div>
       </div>
 
-      <p class="text-center leading-tight">
-        I'm a Fullstack Engineer — a builder focused on creating user-friendly
-        products and experiences for the web.
+      {/* Animated bio text */}
+      <p class="text-center leading-relaxed max-w-2xl text-gray-700 dark:text-gray-200">
+        {typedBio()}
       </p>
 
-      <div class="flex flex-row items-center gap-x-3">
-        <div class="flex items-center gap-x-2 py-1 px-2 rounded hover:bg-gray-200 dark:hover:bg-zinc-800 border border-transparent hover:border-gray-300 dark:hover:border-zinc-700">
-          <span>
-            <VsGlobe size={18} image-rendering="optimizeQuality" />
-          </span>
-
-          <a href="https://the-lazy-dev.vercel.app/" target="_blank"  class="text-gray-700 dark:text-white font-bold text-[11pt]">
-            Blog
-          </a>
-        </div>
-        <p>-</p>
-        <div class="flex items-center gap-x-2 py-1 px-2 rounded hover:bg-gray-200 dark:hover:bg-zinc-800 border border-transparent hover:border-gray-300 dark:hover:border-zinc-700">
-          <span>
-            <BsCalendar4Event size={18} image-rendering="optimizeQuality" />
-          </span>
-
-          <a href="mailto:adeniiferanmi64@gmail.com" class="text-gray-700 dark:text-white font-bold text-[11pt]">
-            Book a meeting
-          </a>
-        </div>
+      {/* Interactive navigation links */}
+      <div class="flex flex-wrap justify-center items-center gap-4">
+        <NavLink href="https://the-lazy-dev.netlify.app/" icon={VsGlobe}>
+          Blog
+        </NavLink>
+        <NavLink
+          href="mailto:adeniiferanmi64@gmail.com"
+          icon={BsCalendar4Event}
+        >
+          Book a meeting
+        </NavLink>
       </div>
 
       <CTA />
-
       <SocialIcons />
     </section>
   );
 };
 
+const NavLink: Component<{ href: string; icon: any; children: JSXElement }> = (
+  props
+) => {
+  const [isHovered, setIsHovered] = createSignal(false);
+
+  return (
+    <A
+      href={props.href}
+      target="_blank"
+      class="group relative px-6 py-2 rounded-lg overflow-hidden"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      aria-label={props.children as string}
+      aria-haspopup="true"
+    >
+      <div
+        class={`absolute inset-0 bg-gray-100 dark:bg-zinc-800 transform transition-transform duration-300 ${
+          isHovered() ? "scale-100" : "scale-0"
+        }`}
+      />
+      <div class="relative flex items-center gap-2 text-gray-700 dark:text-white font-medium">
+        <props.icon size={18} />
+        <span>{props.children}</span>
+      </div>
+    </A>
+  );
+};
+
 const CTA: Component = function () {
   return (
-    <div class="w-full flex justify-center items-center">
-      <a role="button" aria-describedby="Connect with me on X(fka Twitter)" href="https://x.com/feranmiwebdev" tabIndex={-1} class="inline-block text-center dark:bg-white bg-black text-white hover:bg-blend-darken hover:bg-opacity-80 duration-300 dark:text-black py-[8pt] px-4 md:py-[6pt] md:w-[65%] w-full font-semibold rounded-xl">
-        <p class="items-center md:text-[13pt] gap-x-3 mx-auto inline-flex">
+    <div class="w-full max-w-md">
+      <a
+        href="https://x.com/feranmiwebdev"
+        class="group relative block overflow-hidden rounded-xl bg-black dark:bg-white text-white dark:text-black py-3 px-8 text-center font-semibold transition-transform hover:scale-105"
+      >
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 transition-opacity group-hover:opacity-20" />
+        <div class="flex items-center justify-center gap-3">
           <span>Get in touch</span>
-
-          <span>
-            <FaBrandsTwitter />
-          </span>
-        </p>
+          <FaBrandsTwitter class="transform transition-transform group-hover:rotate-12" />
+        </div>
       </a>
     </div>
   );
@@ -80,7 +157,7 @@ const CTA: Component = function () {
 
 const SocialIcons: Component = function () {
   return (
-    <div class="flex flex-row gap-x-3 mt-[8pt]">
+    <div class="flex flex-wrap justify-center gap-x-4">
       <For each={socials}>
         {(social) => (
           <SocialIcon href={social.url}>
@@ -90,14 +167,22 @@ const SocialIcons: Component = function () {
       </For>
     </div>
   );
-}
+};
 
-const SocialIcon: Component<{ href: string; children: JSXElement }> = function (props) {
+const SocialIcon: Component<{ href: string; children: JSXElement }> = function (
+  props
+) {
   return (
-    <a href={props.href} class="dark:bg-[#222] dark:hover:bg-zinc-800 dark:text-white text-gray-700 grid place-content-center p-3 h-[30pt] aspect-square rounded-lg text-2xl duration-200">
-      {props.children}
+    <a
+      href={props.href}
+      class="group relative p-3 rounded-lg overflow-hidden transition-transform hover:scale-110"
+    >
+      <div class="absolute inset-0 bg-gray-100 dark:bg-zinc-800 transform transition-transform origin-left group-hover:scale-x-100 scale-x-0" />
+      <div class="relative text-2xl text-gray-700 dark:text-white transition-transform group-hover:rotate-12">
+        {props.children}
+      </div>
     </a>
-  )
-}
+  );
+};
 
 export { Herosection };
