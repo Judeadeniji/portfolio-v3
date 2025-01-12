@@ -4,6 +4,7 @@ import { FaBrandsTwitter } from "solid-icons/fa";
 import { VsGlobe } from "solid-icons/vs";
 import { socials } from "../shared";
 import { A } from "@solidjs/router";
+import { CgFileDocument } from "solid-icons/cg";
 
 // Custom hook for typing animation
 const useTypewriter = (text: string, speed = 50) => {
@@ -141,16 +142,16 @@ const NavLink: Component<{ href: string; icon: any; children: JSXElement }> = (
 const CTA: Component = function () {
   return (
     <div class="w-full max-w-md">
-      <a
-        href="https://x.com/feranmiwebdev"
-        class="group relative block overflow-hidden rounded-xl bg-black dark:bg-white text-white dark:text-black py-3 px-8 text-center font-semibold transition-transform hover:scale-105"
+      <A
+        download={"Adeniji Oluwaferanmi Resume.pdf"}
+        href="/adeniji-oluwaferanmi-resume.pdf"
+        class="group relative block overflow-hidden rounded-xl bg-black dark:bg-white text-white dark:text-black hover:bg-accent-1 hover:text-black py-3 px-8 text-center font-semibold transition-transform hover:scale-105"
       >
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 transition-opacity group-hover:opacity-20" />
         <div class="flex items-center justify-center gap-3">
-          <span>Get in touch</span>
-          <FaBrandsTwitter class="transform transition-transform group-hover:rotate-12" />
+          <span>Get my Resume</span>
+          <CgFileDocument class="transform transition-transform group-hover:rotate-12" />
         </div>
-      </a>
+      </A>
     </div>
   );
 };
