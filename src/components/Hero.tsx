@@ -45,7 +45,7 @@ const Herosection: Component = function () {
   );
 
   return (
-    <section class="relative min-h-[83vh] flex flex-col gap-y-3 items-center justify-center w-full py-8 px-4 overflow-hidden">
+    <section class="relative py-20 flex flex-col gap-y-3 items-center justify-center w-full px-4 overflow-hidden">
       {/* Profile image with hover effect */}
       <figure
         class="relative w-32 h-32 rounded-full overflow-hidden transform transition-transform duration-500 hover:scale-110"

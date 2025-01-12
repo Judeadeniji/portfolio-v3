@@ -45,7 +45,8 @@ function Header() {
   });
   return (
     <>
-      <header class="cursor-default sticky top-3 left-5 right-5 dark:bg-black/85 backdrop-blur-xl z-10 h-[40pt] w-[95dvw] md:w-full border dark:border-zinc-800 rounded-full max-w-screen-sm mx-auto">
+      <header class="cursor-default sticky top-3 left-0 right-0 z-10">
+      <div class="backdrop-blur-xl bg-white/70 dark:bg-black/85 h-[40pt] w-[95dvw] md:w-full border dark:border-zinc-800 rounded-full max-w-screen-sm mx-auto">
         <div class="flex justify-between items-center px-[16pt] w-full h-full">
           <A href="/" class="flex items-center gap-x-2">
             <h1 class="font-semibold text-2xl underline underline-offset-4 dark:decoration-accent-1 decoration-blue-600">
@@ -133,6 +134,7 @@ function Header() {
             </span>
           </button>
         </div>
+      </div>
       </header>
       <Show when={mobileMenu()}>
         <MobileNav

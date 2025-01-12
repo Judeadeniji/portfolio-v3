@@ -7,7 +7,7 @@ await new Promise((resolve) => setTimeout(resolve, 3000));
 
 const Marquee = () => {
   return (
-    <div id="marquee" class="group relative overflow-hidden select-none h-16 bg-transparent flex flex-row items-center justify-between gap-x-8 origin-top-right rotate-3 uppercase text-black text-3xl font-extrabold font-mono my-1 -mx-2">
+    <div id="marquee" class="group relative overflow-hidden select-none h-12 md:h-16 bg-transparent flex flex-row items-center justify-between gap-x-8 origin-top-right rotate-3 uppercase text-black text-xl md:text-3xl font-extrabold font-mono mb-20 -mx-2">
       <div class="flex whitespace-nowrap gap-x-8 animate-marquee group-hover:[animation-play-state:paused]">
         <div>Full-Stack Developer</div>
         <div>Open Source Advocate</div>
