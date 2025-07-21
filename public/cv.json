@@ -22,9 +22,9 @@
         "img_url": "/images/rccg-banner-of-love.png"
       },
       {
-        "name": "Audrasia Retail",
-        "description": "A retail platform that allows users to purchase products online. The platform features a user-friendly interface, product catalog, and secure payment gateway.",
-        "technologies": ["Next.js", "Tailwind", "NestJS", "Vendure", "Flutterwave"],
+        "name": "Pelzsecret",
+        "description": "Pelzsecret is a Nigerian-based skincare business specializing in products designed to enhance and maintain healthy skin, with a strong focus on addressing concerns like dark spots and promoting overall skin brightness.",
+        "technologies": ["Astro", "Tailwind CSS", "Typescript", "Postgres"],
         "features": [
           "Product Catalog",
           "Shopping Cart",
@@ -32,22 +32,8 @@
           "Payment Gateway Integration",
           "Admin Dashboard"
         ],
-        "img_url": "/images/audrasia-retail.png",
-        "live_url": "https://audrasiaretail.com"
-      },
-      {
-        "name": "Paystack SDK (Edge)",
-        "description": "Paystack SDK written in Typescript for development on edge and serverless servers.",
-        "technologies": ["Typescript", "Better Fetch", "Node.js", "Paystack API"],
-        "repo": "https://github.com/Judeadeniji/paystack-edge",
-        "img_url": "/images/paystack-edge.png"
-      },
-      {
-        "name": "Servex",
-        "description": "A high-performance, extensible HTTP server framework inspired by Express, Hono, and Fastify. It aims to deliver blazing speed, rock-solid reliability, and effortless elegance for modern web applications.",
-        "technologies": ["Typescript", "Bun", "Servex", "Jest"],
-        "repo": "https://github.com/Judeadeniji/servex",
-        "img_url": "/images/servex.png"
+        "img_url": "/images/pelzsecret.png",
+        "live_url": "https://pelzsecret.com.ng"
       },
       {
         "name": "My Portfolio",
@@ -72,19 +58,18 @@
         "img_url": "/images/rest-country-api.png"
       },
       {
-        "name": "Doodle Cam",
-        "description": "A JavaScript-based camera web application that allows users to take pictures, apply filters, and draw on their photos using a simple and intuitive interface.",
-        "live_url": "https://doodle-cam.netlify.app/",
-        "technologies": ["JavaScript", "BraceJS", "Tailwind CSS"],
-        "repo": "https://github.com/Judeadeniji/Doodle-Cam",
-        "img_url": "/images/doodle-cam.png"
+        "name": "Paystack SDK (Edge)",
+        "description": "Paystack SDK written in Typescript for development on edge and serverless servers.",
+        "technologies": ["Typescript", "Better Fetch", "Node.js", "Paystack API"],
+        "repo": "https://github.com/Judeadeniji/paystack-edge",
+        "img_url": "/images/paystack-edge.png"
       },
       {
-        "name": "Rick and Morty DB",
-        "live_url": "https://rick-mort-db.netlify.app",
-        "description": "A web application that fetches data from the Rick and Morty API and displays it in a user-friendly interface. The app allows users to search for characters, view character details, and filter characters by status, species, and gender.",
-        "technologies": ["React", "Tailwind CSS", "RC Extended"],
-        "img_url": "/images/rick-mort-db.png"
+        "name": "Servex",
+        "description": "A high-performance, extensible HTTP server framework inspired by Express, Hono, and Fastify. It aims to deliver blazing speed, rock-solid reliability, and effortless elegance for modern web applications.",
+        "technologies": ["Typescript", "Bun", "Servex", "Jest"],
+        "repo": "https://github.com/Judeadeniji/servex",
+        "img_url": "/images/servex.png"
       },
       {
         "name": "My Portfolio (current)",
