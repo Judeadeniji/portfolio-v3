@@ -7,20 +7,6 @@
   },
   "projects": [
     {
-      "name": "Servex",
-      "description": "A high-performance, extensible HTTP server framework inspired by Express, Hono, and Fastify. It aims to deliver blazing speed, rock-solid reliability, and effortless elegance for modern web applications.",
-      "technologies": ["Typescript", "Bun", "Servex", "Jest"],
-      "repo": "https://github.com/Judeadeniji/servex",
-      "img_url": "/images/servex.png"
-    },
-    {
-      "name": "Paystack SDK (Edge)",
-      "description": "Paystack SDK written in Typescript for development on edge and serverless servers.",
-      "technologies": ["Typescript", "Better Fetch", "Node.js", "Paystack API"],
-      "repo": "https://github.com/Judeadeniji/paystack-edge",
-      "img_url": "/images/paystack-edge.png"
-    },
-    {
       "name": "Pelzsecret",
       "description": "Pelzsecret is a Nigerian-based skincare business specializing in products designed to enhance and maintain healthy skin, with a strong focus on addressing concerns like dark spots and promoting overall skin brightness.",
       "technologies": ["Astro", "Tailwind CSS", "Typescript", "Postgres"],
@@ -61,6 +47,20 @@
       "technologies": ["Sveltekit", "JavaScript", "Tailwind CSS"],
       "live_url": "https://the-lazy-dev.netlify.app",
       "img_url": "/images/personal-blog.png"
+    },
+        {
+      "name": "Servex",
+      "description": "A high-performance, extensible HTTP server framework inspired by Express, Hono, and Fastify. It aims to deliver blazing speed, rock-solid reliability, and effortless elegance for modern web applications.",
+      "technologies": ["Typescript", "Bun", "Servex", "Jest"],
+      "repo": "https://github.com/Judeadeniji/servex",
+      "img_url": "/images/servex.png"
+    },
+    {
+      "name": "Paystack SDK (Edge)",
+      "description": "Paystack SDK written in Typescript for development on edge and serverless servers.",
+      "technologies": ["Typescript", "Better Fetch", "Node.js", "Paystack API"],
+      "repo": "https://github.com/Judeadeniji/paystack-edge",
+      "img_url": "/images/paystack-edge.png"
     },
     {
       "name": "My Portfolio (current)",
