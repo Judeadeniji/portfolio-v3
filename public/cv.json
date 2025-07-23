@@ -9,7 +9,7 @@
     {
       "name": "Pelzsecret",
       "description": "Pelzsecret is a Nigerian-based skincare business specializing in products designed to enhance and maintain healthy skin, with a strong focus on addressing concerns like dark spots and promoting overall skin brightness.",
-      "technologies": ["Astro", "Tailwind CSS", "Typescript", "Postgres"],
+      "technologies": ["Astro", "SolidJs", "React", "Tailwind CSS", "Typescript", "Postgres"],
       "features": [
         "Product Catalog",
         "Shopping Cart",
@@ -23,7 +23,7 @@
     {
       "name": "RCCG Banner of Love Parish Website Project",
       "description": "Led the development of the official website for RCCG Banner of Love Parish, a community church in Lagos. The project involved designing and implementing a user-friendly and visually appealing platform.",
-      "technologies": ["Next.js", "Tailwind", "Git"],
+      "technologies": ["Next.js", "React", "Tailwind CSS", "Git"],
       "features": [
         "Responsive Design",
         "Event Management",
@@ -54,7 +54,8 @@
       "name": "The Ordinary (2023)",
       "description": "An online E-commerce platform built with JavaScript and Tailwind CSS.",
       "live_url": "https://the-ordinary.onrender.com",
-      "img_url": "/images/the-ordinary.png"
+      "img_url": "/images/the-ordinary.png",
+      "technologies": ["JavaScript", "Tailwind CSS", "Node.js", "Express", "Google Image API"]
     },
     {
       "name": "Personal Blog (2023)",

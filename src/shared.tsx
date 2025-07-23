@@ -1,4 +1,3 @@
-import { url } from "inspector";
 import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter } from "solid-icons/ai";
 import { FaSolidEnvelope } from "solid-icons/fa";
 
@@ -10,7 +9,7 @@ const socials = [
   },
   {
     name: "twitter",
-    url: "https://twitter.com/FeranmiWebDev",
+    url: "https://twitter.com/iam_feranmi_",
     Icon: AiOutlineTwitter,
   },
   {
