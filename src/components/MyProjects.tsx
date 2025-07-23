@@ -229,7 +229,7 @@ const Projects: Component<{
       <div 
         class={`transition-all duration-500 ${
           props.displayMode === "grid" 
-            ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8" 
+            ? "grid grid-cols-1 md:grid-cols-2 gap-8" 
             : "flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory"
         }`}
         onMouseLeave={() => setHoveredCard(null)}
@@ -314,7 +314,7 @@ const SingleProjectCard: Component<{
         {/* Content Container */}
         <div class="relative h-full z-10">
           {/* Image Section with Parallax Effect */}
-          <div class="relative h-48 overflow-hidden">
+          <div class="relative h-64 overflow-hidden">
             {/* Image Overlay */}
             <div class={`absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10 transition-opacity duration-500 ${
               isHovered() ? "opacity-100" : "opacity-40"
