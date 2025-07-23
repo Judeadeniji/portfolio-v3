@@ -36,6 +36,21 @@
       "img_url": "/images/rccg-banner-of-love.png"
     },
     {
+      "name": "Positivus",
+      "description": "A modern, high-performance website implementation of the Positivus digital marketing agency design. This project brings the beautiful Figma design to life using React, TanStack Router, and Tailwind CSS for optimal user experience and conversion rates.",
+      "technologies": ["React", "TanStack Router", "Tailwind CSS"],
+      "features": [
+        "Responsive Design",
+        "SEO Optimization",
+        "High Performance",
+        "User-Friendly Navigation",
+        "Conversion-Focused Design"
+      ],
+      "live_url": "https://feranmi-positivus.netlify.app/",
+      "repo": "https://github.com/Judeadeniji/positivus",
+      "img_url": "/images/positivus.png"
+    },
+    {
       "name": "The Ordinary (2023)",
       "description": "An online E-commerce platform built with JavaScript and Tailwind CSS.",
       "live_url": "https://the-ordinary.onrender.com",
