@@ -65,7 +65,7 @@ const MyTechStacks: Component = function () {
               My Tech Stacks
             </p>
             <div class={`text-[10pt] text-gray-500 dark:text-zinc-400 transition-all duration-500 ${
-              dropdownOpened() ? 'opacity-100 translate-y-0 h-auto' : 'opacity-0 h-0 -translate-y-2'
+              dropdownOpened() ? 'opacity-100 translate-y-0 blur-0 h-auto' : 'blur-sm opacity-0 h-0 -translate-y-2'
             }`}>
               {totalStacks()} technologies
             </div>
@@ -85,8 +85,8 @@ const MyTechStacks: Component = function () {
           class={cn(
             "overflow-hidden transition-all duration-700 ease-out",
             dropdownOpened()
-              ? "max-h-[500px] opacity-100 scale-100 mt-3"
-              : "max-h-0 opacity-0 scale-95 mt-0"
+              ? "max-h-[500px] opacity-100 scale-100 blur-0 mt-3"
+              : "max-h-0 opacity-0 scale-95 blur-md mt-0"
           )}
           style={{ 
             "max-height": dropdownOpened() ? "500px" : "0",
