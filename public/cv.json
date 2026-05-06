@@ -3,102 +3,85 @@
   "contact": {
     "email": "adenijiferanmi64@gmail.com",
     "phone": "09048786857",
-    "location": "Ibadan, Oyo state"
+    "location": "Ibadan, Oyo State",
+    "linkedin": "https://www.linkedin.com/in/feranmi-adeniji",
+    "github": "https://github.com/Judeadeniji"
   },
   "projects": [
     {
-      "name": "Pelzsecret",
-      "description": "Pelzsecret is a Nigerian-based skincare business specializing in products designed to enhance and maintain healthy skin, with a strong focus on addressing concerns like dark spots and promoting overall skin brightness.",
-      "technologies": ["Astro", "SolidJs", "React", "Tailwind CSS", "Typescript", "Postgres"],
-      "features": [
-        "Product Catalog",
-        "Shopping Cart",
-        "Order Management",
-        "Payment Gateway Integration",
-        "Admin Dashboard"
-      ],
-      "img_url": "/images/pelzsecret.png",
-      "live_url": "https://pelzsecret.com.ng"
+      "name": "zEnv",
+      "description": "A zero-knowledge secret manager where secrets are encrypted client-side — the server stores only ciphertext and can never decrypt anything. Built solo end-to-end in under a week, shipping as four components: a Go API, TypeScript SDK, Cobra CLI, and a TanStack Start dashboard. Features a custom Go crypto engine using Argon2id + AES-256-GCM + X25519, with a byte-identical TypeScript port via the Web Crypto API. Redis AOF-buffered audit logs are flushed to monthly-partitioned Postgres.",
+      "technologies": ["Go", "TypeScript", "TanStack Start", "Redis", "PostgreSQL", "Docker"],
+      "repo": "https://github.com/Judeadeniji/zenv-sh",
+      "img_url": "/images/placeholder.png"
     },
     {
-      "name": "RCCG Banner of Love Parish Website Project",
-      "description": "Led the development of the official website for RCCG Banner of Love Parish, a community church in Lagos. The project involved designing and implementing a user-friendly and visually appealing platform.",
+      "name": "Permi",
+      "description": "Co-founded and engineered a SaaS platform for tracking CSLB contractor licenses in the US market. Led a full frontend and backend overhaul — migrating the database schema to org-level licensing, rewriting the license service and expiration worker, rebuilding the marketing and pricing pages, and fixing a split-brain theme system. Set up billing via Polar, migrated infra from Neon to Railway Postgres, and integrated Cloudflare Email Routing with Resend.",
+      "technologies": ["TypeScript", "TanStack Start", "Hono", "Drizzle ORM", "PostgreSQL", "Redis"],
+      "features": [
+        "Org-level License Tracking",
+        "Expiration Notifications",
+        "Billing Integration",
+        "Staging Environment",
+        "Email Infrastructure"
+      ],
+      "live_url": "https://permi.app",
+      "img_url": "/images/placeholder.png"
+    },
+    {
+      "name": "Hospio360",
+      "description": "Leading frontend development at a pre-launch hotel management SaaS. Own the entire frontend architecture across two surfaces — a Next.js marketing site and a TanStack Start operations dashboard. Responsible for all component design, UI decisions, and frontend performance.",
+      "technologies": ["Next.js", "TanStack Start", "TypeScript", "Tailwind CSS", "Shadcn UI"],
+      "img_url": "/images/placeholder.png"
+    },
+    {
+      "name": "Testgraders",
+      "description": "A full-stack IELTS practice platform where students submit essays and speaking tests for expert grading. Built the complete student submission flow, examiner review dashboard, and results delivery system end-to-end.",
+      "technologies": ["React", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
+      "img_url": "/images/placeholder.png"
+    },
+    {
+      "name": "Socratic Ink",
+      "description": "Marketing site for a ghostwriting agency. Built with Astro and Astro Content Collections for fast static delivery. Includes a multi-page layout with services, portfolio, FAQ, and a conversion-focused contact flow.",
+      "technologies": ["Astro", "TypeScript", "Tailwind CSS"],
+      "live_url": "https://socraticink.netlify.app",
+      "img_url": "/images/placeholder.png"
+    },
+    {
+      "name": "RCCG Banner of Love Parish Website",
+      "description": "Official website for a Lagos-based church. Led development from design to deployment, implementing event management, sermon archive, online giving, and a member registration form.",
       "technologies": ["Next.js", "React", "Tailwind CSS", "Git"],
       "features": [
         "Responsive Design",
         "Event Management",
         "Sermon Archive",
         "Online Giving",
-        "Content Management System",
         "Member Registration Form"
       ],
       "live_url": "https://rccgbanneroflovelagos.org",
       "img_url": "/images/rccg-banner-of-love.png"
     },
     {
-      "name": "Positivus",
-      "description": "A modern, high-performance website implementation of the Positivus digital marketing agency design. This project brings the beautiful Figma design to life using React, TanStack Router, and Tailwind CSS for optimal user experience and conversion rates.",
-      "technologies": ["React", "TanStack Router", "Tailwind CSS"],
-      "features": [
-        "Responsive Design",
-        "SEO Optimization",
-        "High Performance",
-        "User-Friendly Navigation",
-        "Conversion-Focused Design"
-      ],
-      "live_url": "https://feranmi-positivus.netlify.app/",
-      "repo": "https://github.com/Judeadeniji/positivus",
-      "img_url": "/images/positivus.png"
-    },
-    {
-      "name": "The Ordinary (2023)",
-      "description": "An online E-commerce platform built with JavaScript and Tailwind CSS.",
-      "live_url": "https://the-ordinary.onrender.com",
-      "img_url": "/images/the-ordinary.png",
-      "technologies": ["JavaScript", "Tailwind CSS", "Node.js", "Express", "Google Image API"]
-    },
-    {
-      "name": "Personal Blog (2023)",
-      "description": "A personal blogging website built with Sveltekit, JavaScript, and Tailwind CSS. The app fetches data from an external source and allows for tailored data presentation.",
-      "technologies": ["Sveltekit", "JavaScript", "Tailwind CSS"],
-      "live_url": "https://the-lazy-dev.netlify.app",
-      "img_url": "/images/personal-blog.png"
-    },
-        {
       "name": "Servex",
-      "description": "A high-performance, extensible HTTP server framework inspired by Express, Hono, and Fastify. It aims to deliver blazing speed, rock-solid reliability, and effortless elegance for modern web applications.",
-      "technologies": ["Typescript", "Bun", "Servex", "Jest"],
+      "description": "A high-performance, extensible HTTP server framework built from scratch in TypeScript, inspired by Express, Hono, and Fastify. Designed for blazing speed and rock-solid reliability for modern web applications.",
+      "technologies": ["TypeScript", "Bun", "Jest"],
       "repo": "https://github.com/Judeadeniji/servex",
       "img_url": "/images/servex.png"
     },
     {
       "name": "Paystack SDK (Edge)",
-      "description": "Paystack SDK written in Typescript for development on edge and serverless servers.",
-      "technologies": ["Typescript", "Better Fetch", "Node.js", "Paystack API"],
+      "description": "A TypeScript Paystack SDK built specifically for edge and serverless environments where the official Node.js SDK doesn't work. Uses a lightweight fetch wrapper compatible with Cloudflare Workers, Deno, and Bun.",
+      "technologies": ["TypeScript", "Node.js", "Paystack API"],
       "repo": "https://github.com/Judeadeniji/paystack-edge",
       "img_url": "/images/paystack-edge.png"
     },
     {
-      "name": "My Portfolio (current)",
-      "description": "An updated version of my portfolio built with SolidJs, Typescript, Tailwind CSS, and Vite.",
-      "technologies": ["SolidJs", "Typescript", "Tailwind CSS", "Vite"],
+      "name": "My Portfolio",
+      "description": "This portfolio — built with SolidJS, TypeScript, Tailwind CSS, and Vite. Fast, minimal, and designed to get out of the way of the work.",
+      "technologies": ["SolidJS", "TypeScript", "Tailwind CSS", "Vite"],
       "live_url": "https://feranmi-v3.netlify.app",
       "img_url": "/images/my-portfolio-v3.png"
-    },
-    {
-      "name": "REST Country API (Frontend Mentor)",
-      "description": "A frontend project built with Tailwind, React, and RC Extended for working with React.",
-      "technologies": ["Tailwind", "React", "RC Extended"],
-      "live_url": "https://country-api-with-signals.netlify.app/",
-      "repo": "https://github.com/Judeadeniji/rest-countries-api-with-color-theme-switcher-master-v2-with-signals",
-      "img_url": "/images/rest-country-api.png"
-    },
-    {
-      "name": "My Portfolio",
-      "description": "A personal portfolio that houses some of the projects I have worked on, built with JavaScript and Tailwind CSS.",
-      "technologies": ["JavaScript", "Tailwind CSS"],
-      "live_url": "https://judeadeniji.github.io",
-      "img_url": "/images/my-portfolio.png"
     }
   ]
 }
