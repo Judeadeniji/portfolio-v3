@@ -115,10 +115,11 @@ const AboutMeDetails: Component = function () {
       <div class="space-y-6">
         <h2 class="text-3xl md:text-5xl font-bold tracking-tight">About Me</h2>
         <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl">
-          I'm a passionate web developer with a love for creating beautiful and
-          functional websites. I've always been fascinated by the intersection
-          of design and technology, and I bring that passion to my work every
-          day.
+          I'm a full-stack developer with a strong lean towards systems and infrastructure.
+          I build production-grade web applications — from polished UIs to backend architecture,
+          database design, and deployment. I've co-founded a SaaS, led frontend at a hotel
+          management platform, and built a zero-knowledge secret manager from scratch.
+          I care about code that's maintainable, fast, and actually ships.
         </p>
       </div>
 
@@ -308,18 +309,7 @@ const ExperienceAndEducation: Component = function () {
     >
       <ExperienceSection />
 
-      <div class="space-y-8">
-        <h2 class="text-3xl md:text-5xl font-bold tracking-tight">Education</h2>
-        <div class="p-6 rounded-xl bg-white dark:bg-zinc-900/50 shadow-lg dark:shadow-zinc-900/20 hover:shadow-xl transition-shadow">
-          <h3 class="text-2xl font-bold mb-2">
-            Bachelor of Science in Mathematics
-          </h3>
-          <p class="text-lg text-gray-600 dark:text-gray-400">
-            University of Ibadan
-          </p>
-          <p class="text-sm text-gray-500 dark:text-gray-500">2023 - Present</p>
-        </div>
-      </div>
+
     </div>
   );
 };
