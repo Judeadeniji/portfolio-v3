@@ -14,12 +14,12 @@ const socials = [
   },
   {
     name: "linkedin",
-    url: "https://www.linkedin.com/in/oluwaferanmi-adeniji-537416252",
+    url: "https://www.linkedin.com/in/feranmi-adeniji",
     Icon: AiFillLinkedin,
   },
   {
     name: "mail",
-    url: "mailto:adeniiferanmi64@gamil.com",
+    url: "mailto:adenijiferanmi64@gmail.com",
     Icon: FaSolidEnvelope,
   },
 ] as const;
@@ -75,128 +75,125 @@ export type Resume = {
   projects: Project2[];
 };
 
-
 export const myStacksData = [
   {
     sectionName: "Languages",
     stacks: ["javascript", "typescript", "go"],
   },
   {
-    sectionName: "Frameworks",
+    sectionName: "Frameworks & Libraries",
     stacks: [
       "react",
       "solidjs",
       "svelte",
-      "tailwindcss",
-      "css3",
-      "bun",
-      "express",
+      "astro",
       "nextjs",
+      "tailwindcss",
+      "express",
+      "bun",
     ],
   },
   {
-    sectionName: "tools & software",
+    sectionName: "Tools & Infrastructure",
     stacks: [
       "git",
-      "vscode",
-      "figma",
+      "docker",
       "postgresql",
-      "supabase",
+      "redis",
       "vercel",
       "netlify",
-      "firebase",
+      "cloudflare",
+      "figma",
+      "vscode",
     ],
   },
 ];
 
-const github = (repo: string ) => `https://github.com/Judeadeniji/${repo}`;
+const github = (repo: string) => `https://github.com/Judeadeniji/${repo}`;
 
 export const Experiences = [
   {
-    title: "Frontend Developer",
-    company: "RCCG Banner of Love Parish",
-    duration: "2023",
-    description: "Led frontend development of the church's official website using Next.js and Tailwind. Implemented key features including responsive design, event management, sermon archive, online giving, and member registration. Collaborated with backend developers and delivered the project within timeline.",
-    url: "https://rccgbanneroflovelagos.org",
+    title: "Lead Frontend Developer",
+    company: "Hospio360",
+    duration: "2025 – Present · Remote",
+    description:
+      "Leading all frontend architecture for a pre-launch hotel management SaaS. Own the entire frontend across two surfaces — a Next.js marketing site and a TanStack Start operations dashboard. Responsible for component design, UI decisions, performance, and all frontend tooling.",
     achievements: [
-      "Successfully integrated various functionalities while maintaining a cohesive UI",
-      "Received positive feedback from church community for enhanced online engagement",
-      "Implemented complete content management system"
+      "Architected the full frontend from scratch across marketing and dashboard surfaces",
+      "Established component system and design tokens used across the product",
+      "Optimized performance and responsiveness across all breakpoints",
     ],
   },
   {
-    title: "Open Source Developer",
-    company: "Personal Projects",
-    duration: "2023 - Present",
-    description: "Developed multiple open-source projects including Paystack SDK for edge computing and Servex, a high-performance HTTP server framework.",
+    title: "Co-Founder & Founding Engineer",
+    company: "Permi",
+    duration: "2024 – Present · Remote",
+    description:
+      "Co-founded and engineered a SaaS platform for tracking CSLB contractor licenses in the US market. Led a full frontend and backend overhaul — migrating the database schema, rewriting core services, rebuilding the marketing site, and shipping billing and email infrastructure.",
+    url: "https://permi.app",
+    achievements: [
+      "Migrated schema from user-level to org-level licensing with member preferences",
+      "Rewrote license service and expiration worker from scratch",
+      "Set up billing via Polar, infra on Railway, and email routing via Cloudflare + Resend",
+    ],
+  },
+  {
+    title: "Full Stack Developer",
+    company: "AcuSys",
+    duration: "Jul 2025 – Present · Remote",
+    description:
+      "Built the full marketing and product site for an EdTech platform from scratch. Handles service pages, course listings, and content management via Strapi CMS.",
     projects: [
       {
-        name: "Paystack SDK",
-        tech: ["TypeScript"],
-        type: "Edge Computing Framework",
-        url: github("paystack-egde")
+        name: "AcuSys Platform Site",
+        tech: ["TanStack Start", "Strapi CMS", "TypeScript", "Tailwind CSS"],
+        type: "EdTech Marketing & Product Site",
+        url: "",
       },
-      {
-        name: "Servex",
-        tech: ["TypeScript"],
-        type: "HTTP Server Framework",
-        url: github("servex")
-      }
-    ]
+    ],
+  },
+  {
+    title: "Frontend Developer",
+    company: "RCCG Banner of Love Parish",
+    duration: "2023 · Lagos",
+    description:
+      "Led frontend development of the church's official website. Implemented event management, sermon archive, online giving, and member registration. Delivered on time and within scope.",
+    url: "https://rccgbanneroflovelagos.org",
+    achievements: [
+      "Built a full CMS-backed content system for church leadership to manage independently",
+      "Implemented online giving and member registration flows",
+      "Delivered a fully responsive site across all devices",
+    ],
   },
   {
     title: "Freelance Web Developer",
     company: "Independent",
-    duration: "2022 - Present",
-    description: "Developed various web applications and e-commerce platforms using modern technologies including SvelteKit, React, Next.js, and Tailwind CSS.",
+    duration: "2022 – Present",
+    description:
+      "Delivered production web applications for clients across Nigeria — e-commerce platforms, agency sites, and marketing pages. Handle full project lifecycle from requirements through to deployment and handoff.",
     projects: [
       {
-        name: "Personal Blog",
-        tech: ["SvelteKit", "JavaScript", "Tailwind CSS"],
-        type: "Content Platform",
-        url: "https://the-lazy-dev.netlify.app"
+        name: "Socratic Ink",
+        tech: ["Astro", "TypeScript", "Tailwind CSS"],
+        type: "Ghostwriting Agency Site",
+        url: "https://socraticink.netlify.app",
       },
       {
-        name: "The Ordinary",
-        tech: ["JavaScript", "Tailwind CSS"],
-        type: "E-commerce Platform",
-        url: "https://the-ordinary.onrender.com"
+        name: "Servex",
+        tech: ["TypeScript", "Bun"],
+        type: "HTTP Server Framework",
+        url: github("servex"),
       },
       {
-        name: "Portfolio Website",
-        tech: ["SolidJS", "TypeScript", "Tailwind CSS", "ExpressJS"],
-        type: "Personal Website",
-        url: "https://feranmi-v3.netlify.app"
-      }
-    ]
+        name: "Paystack SDK (Edge)",
+        tech: ["TypeScript"],
+        type: "Edge-compatible Paystack SDK",
+        url: github("paystack-edge"),
+      },
+    ],
   },
-  {
-    title: "Frontend Developer",
-    company: "Frontend Mentor Projects",
-    duration: "2022 - Present",
-    description: "Built multiple frontend applications focusing on responsive design and user experience.",
-    projects: [
-      {
-        name: "REST Country API",
-        tech: ["React", "Tailwind CSS", "RC Extended"],
-        type: "Web Application",
-        url: "https://country-api-with-signals.netlify.app/"
-      },
-      {
-        name: "Doodle Cam",
-        tech: ["JavaScript", "BraceJS"],
-        type: "Web Application",
-        url: "https://doodle-cam.netlify.app"
-      },
-      {
-        name: "Rick and Morty DB",
-        tech: ["JavaScript", "React", "Tailwind CSS"],
-        type: "Web Application",
-        url: "https://rick-mort-db.netlify.app",
-      }
-    ]
-  }
 ];
+
 export const navLinks = [
   {
     name: "Home",
@@ -205,10 +202,6 @@ export const navLinks = [
   {
     name: "About",
     url: "/about-me",
-  },
-  {
-    name: "Blog",
-    url: "https://the-lazy-dev.netlify.app/",
   },
   {
     name: "GitHub",
